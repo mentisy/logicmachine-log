@@ -1,0 +1,12 @@
+Architecture: all
+Category: Logs
+Description: Search, and Delete LogicMachine logs (object, alert, error, regular log)
+Developer: AVolle
+Installed-Size: __size__
+Package: lm-logs
+Title: Logs
+Type: App
+Info:
+Version: __version__
+Brand: AVolle
+Verified: 0

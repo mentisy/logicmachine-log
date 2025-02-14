@@ -1,0 +1,59 @@
+{
+    "alertsrows": [
+        {
+            "id": 2,
+            "scriptname": "system",
+            "alert": "KNX/TP: Connected",
+            "alerttime": 1654276200
+        },
+        {
+            "id": 1,
+            "scriptname": "system",
+            "alert": "KNX/TP: Disconnected",
+            "alerttime": 1654276201
+        }
+    ],
+    "rows": [
+        {
+            "id": 2,
+            "name": "Temperatur ute",
+            "datahex": "A156",
+            "logtime": 1654276201,
+            "datatype": 9001,
+            "units": " °C",
+            "enums": null,
+            "src": 4609,
+            "address": 63744
+        },
+        {
+            "id": 1,
+            "name": "Temperatur inne",
+            "datahex": "1465",
+            "logtime": 1654276200,
+            "datatype": 9,
+            "src": 10,
+            "units": null,
+            "enums": null,
+            "sender": "ss",
+            "address": 63744
+        },
+        {
+            "id": 3,
+            "name": "Scene",
+            "datahex": "02",
+            "logtime": 1654276201,
+            "datatype": 5,
+            "src": 999,
+            "units": "",
+            "enums": "{\"0\":\"0 - Av\",\"1\":\"1 - Trinn 1\",\"2\":\"2 - Trinn 2\",\"3\":\"3 - Trinn 3\",\"4\":\"4 - Trinn 4\",\"default\":\"\"}",
+            "sender": "ss",
+            "address": 63745
+        }
+    ],
+    "rowCount": 2,
+    "hasError": false,
+    "message": null,
+
+    "errmessage": "Invalid log type",
+    "errhasError": true
+}
