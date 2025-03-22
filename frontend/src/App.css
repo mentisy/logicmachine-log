@@ -5,9 +5,143 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    --theme-color: rgb(79 70 229);
+    --theme-color-lighter: rgb(129 140 248);
+    --theme-bg-color: rgb(255 255 255);
+    --theme-text-color: rgb(33 33 33);
+    --theme-text-on-bg-color: rgb(243 244 246);
+    --theme-card-bg-color: rgb(245 245 245);
+    --theme-info-color: rgb(40 53 147);
+    --theme-info-color-darker: rgb(26 35 126);
+    --theme-input-bg: rgb(255 255 255);
+    --theme-input-color: rgb(0 0 0);
+    --theme-button-bg: var(--theme-color);
+    --theme-button-color: rgb(255 255 255);
+    --theme-table-header-color: rgb(107 114 128);
+    --theme-table-header-bg: rgb(249 250 251);
+    --theme-table-header-border-color: rgb(229 231 235);
+    --theme-table-row-bg: rgb(255 255 255);
+    --theme-table-row-color: rgb(17 24 39);
+    --theme-button-delete-bg: rgb(229 57 53);
+    --theme-button-delete-bg-hover: rgb(244 67 54);
+    --theme-dialog-bg: rgb(255, 255, 255);
+    --theme-dialog-color: rgb(38 50 56);
+    --theme-dialog-checkbox: rgb(33 33 33);
+    --github-light-display: inline-block;
+    --github-dark-display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-color: rgb(79 70 229);
+        --theme-color-lighter: rgb(129 140 248);
+        --theme-bg-color: rgb(31 41 55);
+        --theme-text-color: rgb(249, 250, 251);
+        --theme-text-on-bg-color: rgb(243 244 246);
+        --theme-card-bg-color: rgb(55 65 81);
+        --theme-info-color: rgb(159 168 218);
+        --theme-info-color-darker: rgb(123, 135, 253);
+        --theme-input-bg: rgb(75 85 99);
+        --theme-input-color: rgb(249, 250, 251);
+        --theme-button-bg: var(--theme-color);
+        --theme-button-color: rgb(255 255 255);
+        --theme-table-header-color: rgb(249 250 251);
+        --theme-table-header-bg: rgb(55 65 81);
+        --theme-table-header-border-color: rgb(156 163 175);
+        --theme-table-row-bg: rgb(75 85 99);
+        --theme-table-row-color: rgb(229 231 235);
+        --theme-dialog-bg: rgb(55 65 81);
+        --theme-dialog-color: rgb(249 250 251);
+        --theme-dialog-checkbox: rgb(249 250 251);
+        --github-light-display: none;
+        --github-dark-display: inline-block;
+    }
 }
 
 #root {
     margin: 0 auto;
     height: 100%;
+    color: var(--theme-text-color);
+}
+
+.theme-color {
+    background-color: var(--theme-color);
+}
+
+.theme-text-color {
+    color: var(--theme-color);
+}
+
+.theme-text-color-lighter {
+    color: var(--theme-color-lighter);
+}
+
+a.theme-text-color-lighter:hover {
+    color: var(--theme-color);
+}
+
+.theme-bg-color {
+    background-color: var(--theme-bg-color);
+}
+
+.theme-card-bg-color {
+    background-color: var(--theme-card-bg-color);
+}
+
+.theme-info-color {
+    color: var(--theme-info-color);
+}
+
+.theme-info-color-darker {
+    color: var(--theme-info-color-darker);
+}
+
+.theme-input {
+    background-color: var(--theme-input-bg);
+    color: var(--theme-input-color);
+}
+
+.theme-button {
+    background-color: var(--theme-button-bg);
+    color: var(--theme-button-color)
+}
+
+.theme-button-delete {
+    background-color: var(--theme-button-delete-bg) !important;
+}
+
+.theme-button-delete:hover {
+    background-color: var(--theme-button-delete-bg-hover) !important;
+}
+
+.theme-table-th {
+    color: var(--theme-table-header-color);
+    background-color: var(--theme-table-header-bg);
+    border-color: var(--theme-table-header-border-color);
+}
+
+.theme-table-td {
+    color: var(--theme-table-row-color);
+    background-color: var(--theme-table-row-bg);
+}
+
+.theme-dialog {
+    background-color: var(--theme-dialog-bg);
+    color: var(--theme-dialog-color);
+}
+
+.theme-dialog-color {
+    color: var(--theme-dialog-color);
+}
+
+.theme-dialog-checkbox-label {
+    color: var(--theme-dialog-color);
+}
+
+.github-light-logo {
+    display: var(--github-light-display);
+}
+
+.github-dark-logo {
+    display: var(--github-dark-display);
 }
