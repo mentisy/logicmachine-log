@@ -18,8 +18,8 @@ end
 -- Instantiate Logs class
 local logs = Logs:new(IS_PROD)
 
--- Validate searchTerm - Must be set and not empty
-if (searchTerm == nil or string.len(searchTerm) == 0) then
+-- Validate searchTerm - Must be set (empty is allowed)
+if (searchTerm == nil) then
     return logs:validationError("Search term is required")
 end
 
