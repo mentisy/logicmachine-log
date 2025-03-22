@@ -20,7 +20,7 @@
     --theme-table-header-color: rgb(107 114 128);
     --theme-table-header-bg: rgb(249 250 251);
     --theme-table-header-border-color: rgb(229 231 235);
-    --theme-table-row-bg: rgb(75 85 99);
+    --theme-table-row-bg: rgb(255 255 255);
     --theme-table-row-color: rgb(17 24 39);
     --theme-button-delete-bg: rgb(229 57 53);
     --theme-button-delete-bg-hover: rgb(244 67 54);
@@ -48,6 +48,7 @@
         --theme-table-header-color: rgb(249 250 251);
         --theme-table-header-bg: rgb(55 65 81);
         --theme-table-header-border-color: rgb(156 163 175);
+        --theme-table-row-bg: rgb(75 85 99);
         --theme-table-row-color: rgb(229 231 235);
         --theme-dialog-bg: rgb(55 65 81);
         --theme-dialog-color: rgb(249 250 251);
