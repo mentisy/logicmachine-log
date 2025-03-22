@@ -2,10 +2,10 @@ import "./App.css";
 import { BugAntIcon } from "@heroicons/react/24/outline";
 import MainContent from "./components/MainContent.tsx";
 import Footer from "./components/Footer.tsx";
-import { useState } from "react";
+import useLocalStorage from "./hooks/useLocalStorage.ts";
 
 export default function App() {
-    const [wideMode, setWideMode] = useState(false);
+    const [wideMode, setWideMode] = useLocalStorage("widemode", false);
     let narrowClass = "";
     if (!wideMode) {
         narrowClass = " lg:w-4/5 max-w-screen-lg";
