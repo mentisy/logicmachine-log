@@ -15,17 +15,10 @@ export default function App() {
 
     return (
         <div className="relative h-full">
-            <div
-                className={
-                    "flex min-h-full flex-1 flex-col px-6 py-6 lg:px-8 mx-auto dark:bg-gray-800 dark:text-gray-50" +
-                    narrowClass
-                }
-            >
+            <div className={"flex min-h-full flex-1 flex-col px-6 py-6 lg:px-8 mx-auto " + narrowClass}>
                 <header className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <BugAntIcon className="text-indigo-600 h-12 w-12 mx-auto" />
-                    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100">
-                        Logs
-                    </h2>
+                    <BugAntIcon className="h-12 w-12 mx-auto theme-text-color" />
+                    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight">Logs</h2>
                 </header>
                 <section>
                     <MainContent wideMode={wideMode} toggleWideMode={toggleWideMode} />

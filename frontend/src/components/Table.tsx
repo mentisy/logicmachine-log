@@ -86,8 +86,8 @@ export default function Table({ headers, rows, deleteHandler }: TableProps) {
     };
 
     const columnHeaderClass =
-        "px-4 py-2 border-b border-gray-200 dark:border-gray-400 bg-gray-50 dark:bg-gray-700 text-left text-xs font-medium text-gray-500 dark:text-gray-50 uppercase tracking-wider";
-    const columnRowClass = "px-4 py-2 whitespace-nowrap text-sm text-gray-900 dark:bg-gray-600 dark:text-gray-200";
+        "px-4 py-2 border-b text-left text-xs font-medium uppercase tracking-wider theme-table-th";
+    const columnRowClass = "px-4 py-2 whitespace-nowrap text-sm theme-table-td";
 
     const renderedRows = rows
         .filter((row) => !shouldRowBeFiltered(row))
@@ -131,7 +131,7 @@ export default function Table({ headers, rows, deleteHandler }: TableProps) {
                 </div>
             )}
             <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+                <table className="min-w-full theme-bg-color border border-gray-200 rounded-lg">
                     <thead>
                         <tr>
                             <th className={columnHeaderClass + " align-top"}>
@@ -180,7 +180,7 @@ export default function Table({ headers, rows, deleteHandler }: TableProps) {
                     <Button
                         text="Delete selected"
                         onClick={handleDeleteMany}
-                        className="w-full bg-red-600 hover:bg-red-500"
+                        className="w-full theme-button theme-button-delete"
                     />
                 </div>
             )}

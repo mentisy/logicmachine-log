@@ -85,7 +85,7 @@ export default function MainContent({ toggleWideMode, wideMode }: MainContentPro
     }
 
     return (
-        <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl p-5 mt-10 sm:mx-auto sm:w-full">
+        <div className="theme-card-bg-color rounded-2xl p-5 mt-10 sm:mx-auto sm:w-full">
             <h4 className="font-bold text-left mb-4 flex justify-between">
                 <div>Search and Delete Logs</div>
                 <button onClick={toggleWideMode}>
@@ -95,10 +95,7 @@ export default function MainContent({ toggleWideMode, wideMode }: MainContentPro
             </h4>
             <form className="space-y-4" action="#" method="POST" onSubmit={handleSubmit}>
                 <div>
-                    <label
-                        htmlFor="group"
-                        className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-50"
-                    >
+                    <label htmlFor="group" className="block text-sm font-medium leading-6">
                         Search string
                     </label>
                     <div className="mt-2">
@@ -112,10 +109,7 @@ export default function MainContent({ toggleWideMode, wideMode }: MainContentPro
                 </div>
                 <div>
                     <div className="flex-grow w-100">
-                        <label
-                            htmlFor="group"
-                            className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-50"
-                        >
+                        <label htmlFor="group" className="block text-sm font-medium leading-6">
                             Type
                         </label>
                         <div className="mt-2">
@@ -145,7 +139,7 @@ export default function MainContent({ toggleWideMode, wideMode }: MainContentPro
                 }
             />
             {response?.rows && response.rows.length === 0 && (
-                <div className="mt-4 text-indigo-800 dark:text-indigo-200">No matching logs found</div>
+                <div className="mt-4 theme-info-color">No matching logs found</div>
             )}
             {response?.rows && response.rows.length > 0 && (
                 <div className="mt-4">
