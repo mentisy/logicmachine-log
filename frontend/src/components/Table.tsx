@@ -156,7 +156,7 @@ export default function Table({ headers, rows, deleteHandler }: TableProps) {
                             <th className={columnHeaderClass}></th>
                         </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200">
                         {renderedRows.length === 0 && (
                             <tr>
                                 <td colSpan={7} className="mt-4 theme-info-color p-3">
