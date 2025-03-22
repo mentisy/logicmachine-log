@@ -16,7 +16,6 @@ type FormState = {
 
 type MainContentProps = {
     toggleWideMode: () => void;
-    toggleSettingsOpened: () => void;
     wideMode: boolean;
 };
 

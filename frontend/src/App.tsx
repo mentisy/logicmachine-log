@@ -3,10 +3,8 @@ import { BugAntIcon } from "@heroicons/react/24/outline";
 import MainContent from "./components/MainContent.tsx";
 import Footer from "./components/Footer.tsx";
 import { useState } from "react";
-import Settings from "./components/Settings.tsx";
 
 export default function App() {
-    const [settingsOpened, setSettingsOpened] = useState(false);
     const [wideMode, setWideMode] = useState(false);
     let narrowClass = "";
     if (!wideMode) {
@@ -14,7 +12,6 @@ export default function App() {
     }
 
     const toggleWideMode = () => setWideMode(!wideMode);
-    const toggleSettingsOpened = () => setSettingsOpened(!settingsOpened);
 
     return (
         <div className="relative h-full">
@@ -31,17 +28,12 @@ export default function App() {
                     </h2>
                 </header>
                 <section>
-                    <MainContent
-                        wideMode={wideMode}
-                        toggleWideMode={toggleWideMode}
-                        toggleSettingsOpened={toggleSettingsOpened}
-                    />
+                    <MainContent wideMode={wideMode} toggleWideMode={toggleWideMode} />
                 </section>
                 <footer className="text-center mt-3">
                     <Footer />
                 </footer>
             </div>
-            {settingsOpened && <Settings toggleSettingsOpened={toggleSettingsOpened} />}
         </div>
     );
 }
